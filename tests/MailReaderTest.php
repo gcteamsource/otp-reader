@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialLock;
-use Greatcode\Google\CredentialManager;
-use Greatcode\Google\CredentialStorage;
-use Greatcode\Google\GoogleOAuthClient;
-use Greatcode\Mail\EmailMessage;
-use Greatcode\Mail\MailReader;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialLock;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Google\CredentialStorage;
+use Greatcode\OtpReader\Google\GoogleOAuthClient;
+use Greatcode\OtpReader\Mail\EmailMessage;
+use Greatcode\OtpReader\Mail\MailReader;
 use PHPUnit\Framework\TestCase;
 
 class MailReaderTest extends TestCase
@@ -117,7 +117,7 @@ class MailReaderTest extends TestCase
         $reader->registerAccount('simple@gmail.com', 'refresh-token-123');
 
         $driver = $reader->getDriver();
-        $this->assertInstanceOf(\Greatcode\Mail\Drivers\GmailDriver::class, $driver);
+        $this->assertInstanceOf(\Greatcode\OtpReader\Mail\Drivers\GmailDriver::class, $driver);
 
         $list = $driver->getCredentialManager()->listCredentials();
         $this->assertContains('simple@gmail.com', $list);

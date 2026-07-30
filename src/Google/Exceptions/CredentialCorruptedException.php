@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google\Exceptions;
+namespace Greatcode\OtpReader\Google\Exceptions;
 
 class CredentialCorruptedException extends CredentialException
 {

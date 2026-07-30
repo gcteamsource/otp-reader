@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\Credential;
+use Greatcode\OtpReader\Google\Credential;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

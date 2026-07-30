@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Mail;
+namespace Greatcode\OtpReader\Mail;
 
 use DateTimeInterface;
-use Greatcode\Mail\Exceptions\MailReaderException;
+use Greatcode\OtpReader\Mail\Exceptions\MailReaderException;
 
 /**
  * Interface contract for Mail Reader Drivers.

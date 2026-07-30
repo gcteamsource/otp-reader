@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Greatcode\Mail\Exceptions\MailReaderException;
-use Greatcode\Mail\MailReader;
+use Greatcode\OtpReader\Mail\Exceptions\MailReaderException;
+use Greatcode\OtpReader\Mail\MailReader;
 
 /**
- * Super Simple Usage Example: Reading OTP in Scraping Scripts with Greatcode namespace.
+ * Super Simple Usage Example: Reading OTP in Scraping Scripts with Greatcode\OtpReader namespace.
  */
 
 // 1. Inisialisasi MailReader dalam 1 Baris Kode!

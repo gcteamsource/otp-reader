@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Mail;
+namespace Greatcode\OtpReader\Mail;
 
 /**
  * Renders modern, responsive Glassmorphism HTML interfaces for Google OAuth account registration.

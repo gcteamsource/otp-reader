@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Mail\Exceptions;
+namespace Greatcode\OtpReader\Mail\Exceptions;
 
 use Exception;
 

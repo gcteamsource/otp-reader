@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Mail\Drivers;
+namespace Greatcode\OtpReader\Mail\Drivers;
 
-use Greatcode\Google\CredentialManager;
-use Greatcode\Mail\EmailMessage;
-use Greatcode\Mail\Exceptions\MailReaderException;
-use Greatcode\Mail\MailDriverInterface;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Mail\EmailMessage;
+use Greatcode\OtpReader\Mail\Exceptions\MailReaderException;
+use Greatcode\OtpReader\Mail\MailDriverInterface;
 use Throwable;
 
 /**

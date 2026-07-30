@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Mail\EmailMessage;
+use Greatcode\OtpReader\Mail\EmailMessage;
 use PHPUnit\Framework\TestCase;
 
 class EmailMessageTest extends TestCase

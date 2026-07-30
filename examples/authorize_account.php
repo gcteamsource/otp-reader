@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialLock;
-use Greatcode\Google\CredentialManager;
-use Greatcode\Google\CredentialStorage;
-use Greatcode\Google\GoogleOAuthClient;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialLock;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Google\CredentialStorage;
+use Greatcode\OtpReader\Google\GoogleOAuthClient;
 
 /**
  * Example Best Practice: Storing or authorizing Google OAuth credentials for an account.

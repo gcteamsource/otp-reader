@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Mail;
+namespace Greatcode\OtpReader\Mail;
 
 use DateTimeInterface;
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialManager;
-use Greatcode\Mail\Drivers\GmailDriver;
-use Greatcode\Mail\Exceptions\MailReaderException;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Mail\Drivers\GmailDriver;
+use Greatcode\OtpReader\Mail\Exceptions\MailReaderException;
 use Psr\Log\LoggerInterface;
 use Throwable;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google;
+namespace Greatcode\OtpReader\Google;
 
-use Greatcode\Google\Exceptions\CredentialLockException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialLockException;
 
 /**
  * Handles file locking operations using flock().

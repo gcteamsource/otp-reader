@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google;
+namespace Greatcode\OtpReader\Google;
 
 use InvalidArgumentException;
 

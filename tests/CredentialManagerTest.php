@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialLock;
-use Greatcode\Google\CredentialManager;
-use Greatcode\Google\CredentialStorage;
-use Greatcode\Google\GoogleOAuthClient;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialLock;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Google\CredentialStorage;
+use Greatcode\OtpReader\Google\GoogleOAuthClient;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\AbstractLogger;
 

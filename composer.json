@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Greatcode\\Google\\": "src/Google/",
-            "Greatcode\\Mail\\": "src/Mail/"
+            "Greatcode\\OtpReader\\Google\\": "src/Google/",
+            "Greatcode\\OtpReader\\Mail\\": "src/Mail/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Greatcode\\Tests\\": "tests/"
+            "Greatcode\\OtpReader\\Tests\\": "tests/"
         }
     },
     "config": {

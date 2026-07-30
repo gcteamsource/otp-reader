@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google;
+namespace Greatcode\OtpReader\Google;
 
-use Greatcode\Google\Exceptions\CredentialException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 

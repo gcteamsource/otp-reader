@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google;
+namespace Greatcode\OtpReader\Google;
 
-use Greatcode\Google\Exceptions\CredentialRefreshException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialRefreshException;
 use Throwable;
 
 /**

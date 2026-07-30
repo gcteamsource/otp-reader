@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialLock;
-use Greatcode\Google\CredentialManager;
-use Greatcode\Google\CredentialStorage;
-use Greatcode\Google\GoogleOAuthClient;
-use Greatcode\Mail\Drivers\GmailDriver;
-use Greatcode\Mail\EmailMessage;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialLock;
+use Greatcode\OtpReader\Google\CredentialManager;
+use Greatcode\OtpReader\Google\CredentialStorage;
+use Greatcode\OtpReader\Google\GoogleOAuthClient;
+use Greatcode\OtpReader\Mail\Drivers\GmailDriver;
+use Greatcode\OtpReader\Mail\EmailMessage;
 use PHPUnit\Framework\TestCase;
 
 class GmailDriverTest extends TestCase

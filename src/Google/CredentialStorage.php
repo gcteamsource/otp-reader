@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Google;
+namespace Greatcode\OtpReader\Google;
 
-use Greatcode\Google\Exceptions\CredentialCorruptedException;
-use Greatcode\Google\Exceptions\CredentialNotFoundException;
-use Greatcode\Google\Exceptions\CredentialStorageException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialCorruptedException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialNotFoundException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialStorageException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Throwable;

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\Credential;
-use Greatcode\Google\CredentialStorage;
-use Greatcode\Google\Exceptions\CredentialCorruptedException;
-use Greatcode\Google\Exceptions\CredentialNotFoundException;
+use Greatcode\OtpReader\Google\Credential;
+use Greatcode\OtpReader\Google\CredentialStorage;
+use Greatcode\OtpReader\Google\Exceptions\CredentialCorruptedException;
+use Greatcode\OtpReader\Google\Exceptions\CredentialNotFoundException;
 use PHPUnit\Framework\TestCase;
 
 class CredentialStorageTest extends TestCase

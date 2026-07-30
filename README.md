@@ -21,7 +21,7 @@ Engineered specifically for high-concurrency production environments (PHP-FPM, D
 - **⏱️ Smart Polling Retry & Delay:** Retries message polling with customizable attempt limits and delay intervals until the email arrives.
 - **📫 Auto Mark-as-Read:** Automatically marks processed emails as `READ` upon successfully retrieving OTP codes to prevent re-reading stale messages.
 - **🎨 Glassmorphism Web UI:** Includes a single-line Web Registration handler (`MailReader::handleRegistration()`) with a responsive, modern HTML interface.
-- **0️⃣ Zero Framework Dependencies:** Written in pure, strict-typed PHP 8.1+ under the `Greatcode\` namespace adhering to PSR-12 standard.
+- **0️⃣ Zero Framework Dependencies:** Written in pure, strict-typed PHP 8.1+ under the `Greatcode\OtpReader\` namespace adhering to PSR-12 standard.
 
 ---
 
@@ -29,11 +29,11 @@ Engineered specifically for high-concurrency production environments (PHP-FPM, D
 
 ```mermaid
 graph TD
-    A["Scraping Script / Web App"] --> B["Greatcode\Mail\MailReader Facade"]
-    B --> C["Greatcode\Mail\Drivers\GmailDriver"]
-    C --> D["Greatcode\Google\CredentialManager"]
-    D --> E["Greatcode\Google\CredentialLock (flock LOCK_EX)"]
-    D --> F["Greatcode\Google\CredentialStorage"]
+    A["Scraping Script / Web App"] --> B["Greatcode\OtpReader\Mail\MailReader Facade"]
+    B --> C["Greatcode\OtpReader\Mail\Drivers\GmailDriver"]
+    C --> D["Greatcode\OtpReader\Google\CredentialManager"]
+    D --> E["Greatcode\OtpReader\Google\CredentialLock (flock LOCK_EX)"]
+    D --> F["Greatcode\OtpReader\Google\CredentialStorage"]
     F --> G[("JSON Filesystem /storage/google/")]
     C --> H["Gmail REST API v1"]
 ```
@@ -59,9 +59,9 @@ composer require greatcode/otp-reader
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Greatcode\Mail\MailReader;
+use Greatcode\OtpReader\Mail\MailReader;
 
-// 1. Initialize MailReader under Greatcode namespace in 1 line
+// 1. Initialize MailReader under Greatcode\OtpReader namespace in 1 line
 $mailReader = MailReader::createGmail(
     storageDirectory: __DIR__ . '/storage/google',
     clientId: getenv('GOOGLE_CLIENT_ID'),
@@ -90,7 +90,7 @@ if ($otp !== null) {
 If your email uses custom verification token formatting (e.g. `[AUTH-992810]`), pass a custom callable parser:
 
 ```php
-use Greatcode\Mail\EmailMessage;
+use Greatcode\OtpReader\Mail\EmailMessage;
 
 $token = $mailReader->getLatestOtp(
     email: 'user@gmail.com',
@@ -118,7 +118,7 @@ Serve a self-contained, responsive Glassmorphism Web UI for registering accounts
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Greatcode\Mail\MailReader;
+use Greatcode\OtpReader\Mail\MailReader;
 
 // Serves HTML page, handles form submissions, and saves OAuth refresh tokens
 MailReader::handleRegistration(
@@ -138,7 +138,7 @@ Open browser at `http://localhost:8080` to access the registration UI.
 
 ## 📖 API Reference
 
-### `Greatcode\Mail\MailReader`
+### `Greatcode\OtpReader\Mail\MailReader`
 
 | Method | Description |
 | :--- | :--- |
@@ -155,14 +155,14 @@ Open browser at `http://localhost:8080` to access the registration UI.
 All library exceptions extend from base exception classes:
 
 ```text
-Greatcode\Google\Exceptions\CredentialException
+Greatcode\OtpReader\Google\Exceptions\CredentialException
  ├── CredentialNotFoundException
  ├── CredentialCorruptedException
  ├── CredentialLockException
  ├── CredentialRefreshException
  └── CredentialStorageException
 
-Greatcode\Mail\Exceptions\MailReaderException
+Greatcode\OtpReader\Mail\Exceptions\MailReaderException
 ```
 
 ---

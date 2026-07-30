@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Greatcode\Mail\MailReader;
+use Greatcode\OtpReader\Mail\MailReader;
 
 /**
  * Super Simple Web Registration Endpoint.

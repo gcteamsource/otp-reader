@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greatcode\Tests;
+namespace Greatcode\OtpReader\Tests;
 
-use Greatcode\Google\CredentialLock;
+use Greatcode\OtpReader\Google\CredentialLock;
 use PHPUnit\Framework\TestCase;
 
 class CredentialLockTest extends TestCase
