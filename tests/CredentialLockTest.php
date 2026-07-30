@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\CredentialLock;
+use Greatcode\Google\CredentialLock;
 use PHPUnit\Framework\TestCase;
 
 class CredentialLockTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Google;
+namespace Greatcode\Google;
 
 use InvalidArgumentException;
 

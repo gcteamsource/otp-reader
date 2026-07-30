@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\Exceptions\CredentialRefreshException;
-use Google\GoogleOAuthClient;
+use Greatcode\Google\Exceptions\CredentialRefreshException;
+use Greatcode\Google\GoogleOAuthClient;
 use PHPUnit\Framework\TestCase;
 
 class GoogleOAuthClientTest extends TestCase

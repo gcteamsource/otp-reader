@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\Credential;
-use Google\CredentialLock;
-use Google\CredentialManager;
-use Google\CredentialStorage;
-use Google\GoogleOAuthClient;
+use Greatcode\Google\Credential;
+use Greatcode\Google\CredentialLock;
+use Greatcode\Google\CredentialManager;
+use Greatcode\Google\CredentialStorage;
+use Greatcode\Google\GoogleOAuthClient;
 use PHPUnit\Framework\TestCase;
 
 class ConcurrencyTest extends TestCase

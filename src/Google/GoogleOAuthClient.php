@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google;
+namespace Greatcode\Google;
 
-use Google\Exceptions\CredentialRefreshException;
+use Greatcode\Google\Exceptions\CredentialRefreshException;
 use Throwable;
 
 /**

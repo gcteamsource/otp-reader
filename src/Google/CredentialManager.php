@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google;
+namespace Greatcode\Google;
 
-use Google\Exceptions\CredentialException;
+use Greatcode\Google\Exceptions\CredentialException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 

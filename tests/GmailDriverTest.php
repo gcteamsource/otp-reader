@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\Credential;
-use Google\CredentialLock;
-use Google\CredentialManager;
-use Google\CredentialStorage;
-use Google\GoogleOAuthClient;
-use Mail\Drivers\GmailDriver;
-use Mail\EmailMessage;
+use Greatcode\Google\Credential;
+use Greatcode\Google\CredentialLock;
+use Greatcode\Google\CredentialManager;
+use Greatcode\Google\CredentialStorage;
+use Greatcode\Google\GoogleOAuthClient;
+use Greatcode\Mail\Drivers\GmailDriver;
+use Greatcode\Mail\EmailMessage;
 use PHPUnit\Framework\TestCase;
 
 class GmailDriverTest extends TestCase

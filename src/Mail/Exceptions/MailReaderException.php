@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mail\Exceptions;
+namespace Greatcode\Mail\Exceptions;
 
 use Exception;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\Credential;
+use Greatcode\Google\Credential;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

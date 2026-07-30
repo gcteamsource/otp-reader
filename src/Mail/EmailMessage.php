@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mail;
+namespace Greatcode\Mail;
 
 /**
  * Value Object representing an Email Message.

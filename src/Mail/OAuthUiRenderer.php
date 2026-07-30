@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Mail;
+namespace Greatcode\Mail;
 
 /**
  * Renders modern, responsive Glassmorphism HTML interfaces for Google OAuth account registration.
@@ -309,7 +309,7 @@ class OAuthUiRenderer
                             Mail Reader Account Register
                         </div>
                         <h1>Register Google Account</h1>
-                        <p classsubtitle">Authorize OAuth credentials for automated OTP extraction</p>
+                        <p class="subtitle">Authorize OAuth credentials for automated OTP extraction</p>
                     </div>
 
                     {$successAlert}

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Mail\OAuthUiRenderer;
+use Greatcode\Mail\OAuthUiRenderer;
 use PHPUnit\Framework\TestCase;
 
 class OAuthUiRendererTest extends TestCase

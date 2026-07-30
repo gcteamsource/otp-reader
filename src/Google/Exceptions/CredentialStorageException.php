@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Google\Exceptions;
+namespace Greatcode\Google\Exceptions;
 
 class CredentialStorageException extends CredentialException
 {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Mail\EmailMessage;
+use Greatcode\Mail\EmailMessage;
 use PHPUnit\Framework\TestCase;
 
 class EmailMessageTest extends TestCase

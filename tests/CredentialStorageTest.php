@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Google\Tests;
+namespace Greatcode\Tests;
 
-use Google\Credential;
-use Google\CredentialStorage;
-use Google\Exceptions\CredentialCorruptedException;
-use Google\Exceptions\CredentialNotFoundException;
+use Greatcode\Google\Credential;
+use Greatcode\Google\CredentialStorage;
+use Greatcode\Google\Exceptions\CredentialCorruptedException;
+use Greatcode\Google\Exceptions\CredentialNotFoundException;
 use PHPUnit\Framework\TestCase;
 
 class CredentialStorageTest extends TestCase

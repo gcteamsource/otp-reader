@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Google;
+namespace Greatcode\Google;
 
-use Google\Exceptions\CredentialCorruptedException;
-use Google\Exceptions\CredentialNotFoundException;
-use Google\Exceptions\CredentialStorageException;
+use Greatcode\Google\Exceptions\CredentialCorruptedException;
+use Greatcode\Google\Exceptions\CredentialNotFoundException;
+use Greatcode\Google\Exceptions\CredentialStorageException;
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Throwable;

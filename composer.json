@@ -12,13 +12,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Google\\": "src/Google/",
-            "Mail\\": "src/Mail/"
+            "Greatcode\\Google\\": "src/Google/",
+            "Greatcode\\Mail\\": "src/Mail/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Google\\Tests\\": "tests/"
+            "Greatcode\\Tests\\": "tests/"
         }
     },
     "config": {
