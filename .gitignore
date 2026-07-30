@@ -1,0 +1,24 @@
+# Dependencies
+/vendor/
+
+# Credential & Lock Storage
+/storage/google/*.json
+/storage/google/*.json.tmp
+/storage/google/*.json.bak
+/storage/google/*.lock
+/storage/google/refresh_calls.log
+!/storage/google/.gitkeep
+
+# Testing & Caching
+/.phpunit.cache/
+/.phpunit.result.cache
+/coverage/
+.php-cs-fixer.cache
+
+# System & OS Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.local

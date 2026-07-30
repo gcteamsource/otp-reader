@@ -1,0 +1,28 @@
+{
+    "name": "greatcode/mail-reader",
+    "description": "Mail Reader - Thread-safe, atomic, file-based Google OAuth credential storage library in native PHP with Mail Reader & Gmail Driver",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "psr/log": "^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Google\\": "src/Google/",
+            "Mail\\": "src/Mail/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Google\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {}
+    }
+}
