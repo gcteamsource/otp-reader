@@ -1,6 +1,6 @@
 {
-    "name": "greatcode/mail-reader",
-    "description": "Mail Reader - Thread-safe, atomic, file-based Google OAuth credential storage library in native PHP with Mail Reader & Gmail Driver",
+    "name": "greatcode/otp-reader",
+    "description": "OTP Reader - Thread-safe, atomic, file-based Google OAuth credential storage library in native PHP with Mail Reader & Gmail Driver",
     "type": "library",
     "license": "MIT",
     "require": {

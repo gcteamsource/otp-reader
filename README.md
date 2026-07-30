@@ -45,7 +45,7 @@ graph TD
 Install via Composer:
 
 ```bash
-composer require greatcode/mail-reader
+composer require greatcode/otp-reader
 ```
 
 ---
@@ -129,9 +129,11 @@ MailReader::handleRegistration(
 ```
 
 Run local PHP server to test:
+
 ```bash
 php -S localhost:8080 examples/register_web.php
 ```
+
 Open browser at `http://localhost:8080` to access the registration UI.
 
 ---
@@ -140,13 +142,13 @@ Open browser at `http://localhost:8080` to access the registration UI.
 
 ### `MailReader`
 
-| Method | Description |
-| :--- | :--- |
-| `createGmail($storageDir, $clientId, $clientSecret, $httpHandler = null)` | One-line static factory creating `MailReader` with Gmail Driver. |
-| `registerAccount($email, $refreshToken)` | Registers/updates an account's OAuth refresh token. |
+| Method                                                                                           | Description                                                              |
+| :----------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------- |
+| `createGmail($storageDir, $clientId, $clientSecret, $httpHandler = null)`                        | One-line static factory creating `MailReader` with Gmail Driver.         |
+| `registerAccount($email, $refreshToken)`                                                         | Registers/updates an account's OAuth refresh token.                      |
 | `getLatestOtp($email, $from, $afterTime, $parser, $maxAttempts, $delaySeconds, $autoMarkAsRead)` | Polls, extracts OTP, retries with delay, and auto-marks message as read. |
-| `markAsRead($email, $messageId)` | Marks a specific email message as read in Gmail. |
-| `handleRegistration($storageDir, $clientId, $clientSecret)` | Static helper for handling web HTTP requests and rendering HTML UI. |
+| `markAsRead($email, $messageId)`                                                                 | Marks a specific email message as read in Gmail.                         |
+| `handleRegistration($storageDir, $clientId, $clientSecret)`                                      | Static helper for handling web HTTP requests and rendering HTML UI.      |
 
 ---
 
