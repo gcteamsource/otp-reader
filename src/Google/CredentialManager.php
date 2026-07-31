@@ -138,7 +138,7 @@ class CredentialManager
      *
      * @throws CredentialException
      */
-    public function authorizeCode(string $email, string $code, string $redirectUri = ''): Credential
+    public function authorizeCode(string $email, string $code, string $redirectUri = 'urn:ietf:wg:oauth:2.0:oob'): Credential
     {
         return $this->lock->exclusive($email, function () use ($email, $code, $redirectUri): Credential {
             $this->logger->info('Exchanging authorization code', ['email' => $email]);

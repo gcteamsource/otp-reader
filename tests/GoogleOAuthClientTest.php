@@ -16,6 +16,7 @@ class GoogleOAuthClientTest extends TestCase
             $this->assertSame('POST', $method);
             $this->assertSame('authorization_code', $params['grant_type']);
             $this->assertSame('sample_code', $params['code']);
+            $this->assertSame('https://example.com/callback', $params['redirect_uri']);
 
             return [
                 'status' => 200,
@@ -38,6 +39,28 @@ class GoogleOAuthClientTest extends TestCase
             'https://www.googleapis.com/auth/gmail.readonly',
             'https://www.googleapis.com/auth/userinfo.email',
         ], $result['scope']);
+    }
+
+    public function testExchangeAuthorizationCodeDefaultRedirectUri(): void
+    {
+        $mockHttp = function (string $url, string $method, array $headers, array $params): array {
+            $this->assertSame('urn:ietf:wg:oauth:2.0:oob', $params['redirect_uri']);
+
+            return [
+                'status' => 200,
+                'body' => json_encode([
+                    'access_token' => 'mock-access-token',
+                    'refresh_token' => 'mock-refresh-token',
+                    'expires_in' => 3600,
+                    'scope' => 'https://www.googleapis.com/auth/gmail.readonly',
+                ], JSON_THROW_ON_ERROR),
+            ];
+        };
+
+        $client = new GoogleOAuthClient('client-id', 'client-secret', $mockHttp);
+        $result = $client->exchangeAuthorizationCode('sample_code');
+
+        $this->assertSame('mock-access-token', $result['access_token']);
     }
 
     public function testRefreshAccessTokenSuccess(): void

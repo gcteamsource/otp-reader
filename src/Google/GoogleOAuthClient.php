@@ -34,18 +34,17 @@ class GoogleOAuthClient
      * @return array{access_token: string, refresh_token: string, expires_in: int, scope: string[]}
      * @throws CredentialRefreshException
      */
-    public function exchangeAuthorizationCode(string $code, string $redirectUri = ''): array
+    public function exchangeAuthorizationCode(string $code, string $redirectUri = 'urn:ietf:wg:oauth:2.0:oob'): array
     {
+        $effectiveRedirectUri = $redirectUri !== '' ? $redirectUri : 'urn:ietf:wg:oauth:2.0:oob';
+
         $params = [
             'grant_type' => 'authorization_code',
             'code' => $code,
             'client_id' => $this->clientId,
             'client_secret' => $this->clientSecret,
+            'redirect_uri' => $effectiveRedirectUri,
         ];
-
-        if ($redirectUri !== '') {
-            $params['redirect_uri'] = $redirectUri;
-        }
 
         $response = $this->sendPostRequest(self::TOKEN_URL, $params);
         $data = $this->parseResponse($response, 'Failed to exchange authorization code');
